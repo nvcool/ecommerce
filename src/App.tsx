@@ -1,7 +1,10 @@
 import { Route, Routes } from "react-router";
-import { AppLayout } from "./components/layout/AppLayout";
-import { Home } from "./components/Home/Home";
-import { Dashboard } from "./components/dashboard/Dashboard";
+import { AppLayout } from "./layout/AppLayout";
+import { Home } from "./pages/home/Home";
+import { AdminLayout } from "./layout/AdminLayout";
+import { Dashboard } from "./pages/admin/Dashboard";
+import { Products } from "./components/admin/products/Products";
+import { Orders } from "./components/admin/orders/Orders";
 
 function App() {
   return (
@@ -9,7 +12,11 @@ function App() {
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
       </Route>
-      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="admin" element={<AdminLayout />}>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="products" element={<Products />} />
+        <Route path="orders" element={<Orders />} />
+      </Route>
     </Routes>
   );
 }

@@ -1,19 +1,19 @@
 import { NavLink } from "react-router";
 const links = [
   { label: "Home", link: "/" },
-  { label: "Dashboard", link: "dashboard" },
+  { label: "Admin", link: "admin/dashboard" },
 ];
 
 export const Header = () => {
   return (
-    <div className="">
-      <div className="bg-black-900 text-white-900 bg bg text-primary-B500 flex gap-[8.5px] justify-center py-2">
+    <header className="">
+      <div className="bg-black-900 text-white-900 bg bg text-primary-B500 flex justify-center gap-[8.5px] py-2">
         <span> Get 25% OFF on your first order.</span>
         <span>Order Now</span>
       </div>
       <nav>
         <ul>
-          <li className="flex gap-10 justify-center ">
+          <li className="flex justify-center gap-10">
             {links.map((link) => (
               <NavLink key={link.link} to={link.link}>
                 {link.label}
@@ -22,6 +22,6 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
