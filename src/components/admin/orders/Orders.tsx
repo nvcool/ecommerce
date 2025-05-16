@@ -3,7 +3,7 @@ import { OrdersContent } from "./OrdersContent";
 
 export const Orders = () => {
   return (
-    <div className="grid h-fit">
+    <section className="grid h-fit">
       <AdminHeader
         breadcrumbs={[
           { link: "/admin/orders", text: "Admin" },
@@ -11,6 +11,6 @@ export const Orders = () => {
         ]}
       />
       <OrdersContent />
-    </div>
+    </section>
   );
 };

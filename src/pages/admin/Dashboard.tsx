@@ -3,7 +3,7 @@ import { DashboardContent } from "../../components/admin/dashboard/DashboardCont
 
 export const Dashboard = () => {
   return (
-    <div className="grid h-fit">
+    <section className="grid h-fit">
       <AdminHeader
         breadcrumbs={[
           { link: "/admin/dashboard", text: "Admin" },
@@ -11,7 +11,7 @@ export const Dashboard = () => {
         ]}
       />
       <DashboardContent />
-    </div>
+    </section>
   );
 };
 

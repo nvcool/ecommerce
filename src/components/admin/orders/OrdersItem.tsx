@@ -1,27 +1,27 @@
 import { useQuery } from "@tanstack/react-query";
-import tShirt from "../../assets/products/t-shirt-1.png";
-import { SvgMore } from "../../components/ui/svg/SvgMore";
-import { API_URL } from "../../lib/query";
-import type { IProducts } from "../../types/IProducts";
+import tShirt from "../../../assets/products/t-shirt-1.png";
+import { API_URL } from "../../../lib/query";
+import { SvgMore } from "../../ui/svg/SvgMore";
+import type { IOrders } from "../../../types/IOrders";
 
 const getAllProducts = async () => {
   const res = await fetch(`${API_URL}/clothings`);
   return await res.json();
 };
 
-export const ClothingItem = () => {
-  const { data: products } = useQuery<IProducts[]>({
+export const OrdersItem = () => {
+  const { data: orders } = useQuery<IOrders[]>({
     queryKey: ["products"],
     queryFn: getAllProducts,
   });
 
   return (
     <tbody className="font-medium">
-      {products &&
-        products.map((product) => (
+      {orders &&
+        orders.map((order) => (
           <tr
             className="border-white-100 items-center border-b px-8 py-4 font-medium"
-            key={product.id}
+            key={order.id}
           >
             <td className="w-[12%] py-4 pl-12">
               <img
@@ -31,11 +31,10 @@ export const ClothingItem = () => {
               />
             </td>
 
-            <td className="w-[25%]">{product.title}</td>
-            <td>{product.sku}</td>
-            <td>{product.price}</td>
-            <td>{product.stock}</td>
-            <td>{product.category}</td>
+            <td className="w-[25%]">{order.title}</td>
+            <td className="w-[18%]">{order.date}</td>
+            <td className="w-[15%]">{order.price}</td>
+            <td>{order.status}</td>
             <td>
               <button className="cursor-pointer pl-3">
                 <SvgMore />
