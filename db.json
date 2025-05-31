@@ -1,0 +1,350 @@
+{
+  "orders": [
+    {
+      "id": "1f-ch",
+      "date": "20 Mar, 2023",
+      "total": 110,
+      "status": "completed",
+      "products": [
+        {
+          "id": "5f-ch",
+          "image": "tShirt",
+          "title": "Raw Black T-Shirt Lineup",
+          "sku": 47514501,
+          "price": 75,
+          "stock": "In Stock",
+          "category": "T-shirt, Men",
+          "date": "20 Mar, 2023",
+          "quantity": 2
+        },
+        {
+          "id": "1zxf-4ch",
+          "image": "tShirt",
+          "title": "Classic Monochrome Tees",
+          "sku": 47514501,
+          "price": 35,
+          "stock": "In Stock",
+          "category": "T-shirt, Men",
+          "date": "19 Mar, 2023",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "1f-4ch",
+      "date": "20 Mar, 2023",
+      "total": 75,
+      "status": "processing",
+      "products": [
+        {
+          "id": "5f-ch",
+          "image": "tShirt",
+          "title": "Raw Black T-Shirt Lineup",
+          "sku": 47514501,
+          "price": 75,
+          "stock": "In Stock",
+          "category": "T-shirt, Men",
+          "date": "20 Mar, 2023",
+          "quantity": 1
+        },
+        {
+          "id": "1zxf-4ch",
+          "image": "tShirt",
+          "title": "Classic Monochrome Tees",
+          "sku": 47514501,
+          "price": 35,
+          "stock": "In Stock",
+          "category": "T-shirt, Men",
+          "date": "19 Mar, 2023",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "1yyf-4erych",
+      "date": "20 Mar, 2023",
+      "total": 75,
+      "status": "cancelled",
+      "products": [
+        {
+          "id": "5f-ch",
+          "image": "tShirt",
+          "title": "Raw Black T-Shirt Lineup",
+          "sku": 47514501,
+          "price": 75,
+          "stock": "In Stock",
+          "category": "T-shirt, Men",
+          "date": "20 Mar, 2023"
+        },
+        {
+          "id": "1zxf-4ch",
+          "image": "tShirt",
+          "title": "Classic Monochrome Tees",
+          "sku": 47514501,
+          "price": 35,
+          "stock": "In Stock",
+          "category": "T-shirt, Men",
+          "date": "19 Mar, 2023"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "1zxf-4ch",
+      "images": ["tShirt"],
+      "title": "Classic Monochrome Tees",
+      "sku": 47514501,
+      "price": 35,
+      "stock": "In Stock",
+      "category": "T-shirt, Men",
+      "date": "19 Mar, 2023",
+      "description": "Very perfect clothings",
+      "sizes": [
+        { "name": "M", "amount": 5 },
+        { "name": "S", "amount": 2 }
+      ],
+      "colors": [{ "name": "Blue", "hex": "#334433" }]
+    },
+
+    {
+      "id": "5sdxxf-ch",
+      "image": "tShirt",
+      "title": "Monochromatic Wardrobe",
+      "sku": 47514501,
+      "price": 27,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt",
+      "date": "7 Feb, 2023"
+    },
+    {
+      "id": "12xdf-ch",
+      "image": "tShirt",
+      "title": "Essential Neutrals",
+      "sku": 47514501,
+      "price": 22,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt, Raw",
+      "date": "7 Feb, 2023"
+    },
+    {
+      "id": "5ccf-chrrh",
+      "image": "tShirt",
+      "title": "UTRAANET Black",
+      "sku": 47514501,
+      "price": 43,
+      "stock": "In Stock",
+      "category": "T-shirt, Trend",
+      "date": "7 Feb, 2023"
+    },
+    {
+      "id": "5free-ssch",
+      "image": "tShirt",
+      "title": "Elegant Ebony Sweatshirts",
+      "sku": 47514501,
+      "price": 57,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "Hoodie",
+      "date": "19 Mar, 2023"
+    },
+    {
+      "id": "5zxf-cferh",
+      "image": "tShirt",
+      "title": "Sleek and Cozy Black",
+      "sku": 47514501,
+      "price": 30,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt",
+      "date": "19 Mar, 2023"
+    },
+    {
+      "id": "5f-ch",
+      "image": "tShirt",
+      "title": "Raw Black T-Shirt Lineup",
+      "sku": 47514501,
+      "price": 75,
+      "stock": "In Stock",
+      "category": "T-shirt, Men",
+      "date": "20 Mar, 2023"
+    },
+    {
+      "id": "1zxf-4ch",
+      "image": "tShirt",
+      "title": "Classic Monochrome Tees",
+      "sku": 47514501,
+      "price": 35,
+      "stock": "In Stock",
+      "category": "T-shirt, Men",
+      "date": "19 Mar, 2023"
+    },
+    {
+      "id": "5sdxxf-ch",
+      "image": "tShirt",
+      "title": "Monochromatic Wardrobe",
+      "sku": 47514501,
+      "price": 27,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt",
+      "date": "7 Feb, 2023"
+    },
+    {
+      "id": "12xdf-ch",
+      "image": "tShirt",
+      "title": "Essential Neutrals",
+      "sku": 47514501,
+      "price": 22,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt, Raw",
+      "date": "7 Feb, 2023"
+    },
+    {
+      "id": "5ccf-chrrh",
+      "image": "tShirt",
+      "title": "UTRAANET Black",
+      "sku": 47514501,
+      "price": 43,
+      "stock": "In Stock",
+      "category": "T-shirt, Trend",
+      "date": "7 Feb, 2023"
+    },
+    {
+      "id": "5free-ssch",
+      "image": "tShirt",
+      "title": "Elegant Ebony Sweatshirts",
+      "sku": 47514501,
+      "price": 57,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "Hoodie",
+      "date": "19 Mar, 2023"
+    },
+    {
+      "id": "5zxf-cferh",
+      "image": "tShirt",
+      "title": "Sleek and Cozy Black",
+      "sku": 47514501,
+      "price": 30,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt",
+      "date": "19 Mar, 2023"
+    }
+  ],
+  "customers": [
+    {
+      "id": "12-cfh",
+      "name": "Esthern Howard",
+      "email": "esther.howard@gmail.com",
+      "address": "8642 Yule Street, Arvada CO 80007",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVBbO_6tGTz9VaeeWb4ah_9PmHnqvVyc_ESA&s"
+    },
+    {
+      "id": "1w2-cfh",
+      "name": "Wade Warren",
+      "email": "wade.warren@gmail.com",
+      "address": "5331 Rexford Court, Montgomery AL 36116"
+    },
+    {
+      "id": "12xx-cfh",
+      "name": "Brooklyn Simmons",
+      "email": "brooklyn.simmons@gmail.com",
+      "address": "2325 Eastridge Circle, Moore OK 73160"
+    },
+    {
+      "id": "1w2-cfhbvc",
+      "name": "Robert Fox",
+      "email": "robert.fox@gmail.com",
+      "address": "2436 Naples Avenue, Panama City FL 32405",
+      "image": "https://static.vecteezy.com/system/resources/previews/026/174/963/non_2x/mail-carrier-avatar-filled-outline-icon-vector.jpg"
+    },
+    {
+      "id": "12-cfxh",
+      "name": "Esthern Howard",
+      "email": "esther.howard@gmail.com",
+      "address": "8642 Yule Street, Arvada CO 80007"
+    },
+    {
+      "id": "1w2-cfhxxxz",
+      "name": "Wade Warren",
+      "email": "wade.warren@gmail.com",
+      "address": "5331 Rexford Court, Montgomery AL 36116"
+    },
+    {
+      "id": "12xx-cfh",
+      "name": "Brooklyn Simmons",
+      "email": "brooklyn.simmons@gmail.com",
+      "address": "2325 Eastridge Circle, Moore OK 73160"
+    },
+    {
+      "id": "1w2-cfhbvc",
+      "name": "Robert Fox",
+      "email": "robert.fox@gmail.com",
+      "address": "2436 Naples Avenue, Panama City FL 32405"
+    },
+    {
+      "id": "12ww-cfh",
+      "name": "Esthern Howard",
+      "email": "esther.howard@gmail.com",
+      "address": "8642 Yule Street, Arvada CO 80007"
+    },
+    {
+      "id": "1wd2-cfh",
+      "name": "Wade Warren",
+      "email": "wade.warren@gmail.com",
+      "address": "5331 Rexford Court, Montgomery AL 36116"
+    },
+    {
+      "id": "12txx-cfh",
+      "name": "Brooklyn Simmons",
+      "email": "brooklyn.simmons@gmail.com",
+      "address": "2325 Eastridge Circle, Moore OK 73160"
+    },
+    {
+      "id": "1yw2-cfhbvc",
+      "name": "Robert Fox",
+      "email": "robert.fox@gmail.com",
+      "address": "2436 Naples Avenue, Panama City FL 32405"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "2323gd-43",
+      "raiting": 2.5,
+      "text": "Roverti defe",
+      "user": {
+        "id": "1yw2-cfhbvc",
+        "name": "Robert Fox",
+        "email": "robert.fox@gmail.com",
+        "address": "2436 Naples Avenue, Panama City FL 32405"
+      }
+    },
+    {
+      "id": "423d-4zz3",
+      "raiting": 4.5,
+      "text": "Roverti xzczxdefe",
+      "user": {
+        "id": "1yw2-cfhbvc",
+        "name": "Robert Fox",
+        "email": "robert.fox@gmail.com",
+        "address": "2436 Naples Avenue, Panama City FL 32405"
+      }
+    },
+    {
+      "id": "423-gd-43",
+      "raiting": 5,
+      "text": "Roverti defsssre",
+      "user": {
+        "id": "1yw2-cfhbvc",
+        "name": "Robert Fox",
+        "email": "robert.fox@gmail.com",
+        "address": "2436 Naples Avenue, Panama City FL 32405"
+      }
+    }
+  ]
+}

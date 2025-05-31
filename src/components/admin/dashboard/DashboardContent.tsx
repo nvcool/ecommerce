@@ -5,7 +5,7 @@ import { SimpleBarChart } from "../../charts/SimpleBarChart";
 import { SvgMinus } from "../../ui/svg/SvgMinus";
 import { DashboardRecentOrders } from "./DashboardRecentOrders";
 // import { Info } from "../../ui/Info";
-// import { InputContent } from "../../ui/InputContent";
+// import { InputWithLabel } from "../../ui/InputWithLabel";
 // import { Successfully } from "../../ui/Successfully";
 // import { Warning } from "../../ui/Warning";
 
@@ -13,7 +13,7 @@ export const DashboardContent = () => {
   return (
     <section className="grid gap-10">
       {/* <div className="grid gap-2">
-        <InputContent placeholder="Name..." title="Name" />
+        <InputWithLabel placeholder="Name..." title="Name" />
         <Warning text="Enter correct name!" />
         <Successfully text="You have successfully logged in!" />
         <Info text="This item added to your Wishlist!" />

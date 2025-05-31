@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-white-100 text-black-800 font-manrope text-sm leading-[175%];
-  }
-}
-
 @theme {
   --font-manrope: "Manrope", "sans-serif";
-  --color-*: initial;
 
   --color-primary-900: #4078ff;
   --color-primary-800: #5c83ff;
@@ -74,7 +67,10 @@
   --color-yellow-300: #ffdc9e;
   --color-yellow-200: #ffeac4;
   --color-yellow-100: #fff1d8;
+}
 
-  --container-8xl:                
-;
+@layer base {
+  body {
+    @apply bg-white-100 text-black-800 font-manrope text-sm leading-[175%];
+  }
 }

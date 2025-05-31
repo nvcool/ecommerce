@@ -1,10 +1,31 @@
-import { Input } from "../../ui/Input";
+import { Input } from "../../ui/input/Input";
+import { Pagination } from "../../ui/Pagination";
 import { SvgSearch } from "../../ui/svg/SvgSearch";
-import { OrdersList } from "./OrdersList";
+import { OrdersTable } from "./OrdersTable";
+import { API_URL } from "../../../lib/queriesProducts";
+import { useQuery } from "@tanstack/react-query";
+import type { IOrder } from "../../../types/IOrder";
+import type { IPaginationResponse } from "../../../types/IPaginationResponse";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../../../store";
+import { setPage } from "./ordersSlice";
+
+const getAllOrders = async (page: number, limit: number) => {
+  const res = await fetch(`${API_URL}/orders?_page=${page}&_per_page=${limit}`);
+  return (await res.json()) as IPaginationResponse<IOrder>;
+};
 
 export const OrdersContent = () => {
+  const pagination = useSelector((state: RootState) => state.ordersPage);
+  const dispatch = useDispatch();
+
+  const { data: orders } = useQuery({
+    queryKey: ["orders", pagination.page, pagination.limit],
+    queryFn: () => getAllOrders(pagination.page, pagination.limit),
+  });
+
   return (
-    <section className="bg-white-900 rounded-lg">
+    <section className="bg-white-900 flex h-[727px] flex-col rounded-lg">
       <div className="flex items-center justify-between py-6 pr-10 pl-12">
         <h4 className="text-lg leading-normal font-medium">Orders</h4>
         <div className="flex gap-4">
@@ -15,9 +36,15 @@ export const OrdersContent = () => {
         </div>
       </div>
 
-      <div className="">
-        <OrdersList />
+      <div className="flex-grow overflow-auto">
+        <OrdersTable orders={orders?.data} />
       </div>
+
+      <Pagination
+        pageCount={orders?.pages ? orders.pages : 1}
+        pagination={pagination}
+        onPageChange={(selected) => dispatch(setPage(selected))}
+      />
     </section>
   );
 };
