@@ -1,13 +1,27 @@
+import { useMutation } from "@tanstack/react-query";
 import type { IReview } from "../../../types/IReview";
-import { SvgMore } from "../../ui/svg/SvgMore";
+import { DropdownMenu } from "../../ui/DropdownMenu";
 import { SvgSort } from "../../ui/svg/SvgSort";
 import { UserAvatar } from "../../UserAvatar";
+import { reviewsApi } from "../../../lib/queriesReviews";
+import { queryClient } from "../../../App";
 
 interface IReviewsTableProps {
   reviews?: IReview[];
 }
 
 export const ReviewsTable = ({ reviews }: IReviewsTableProps) => {
+  const { mutate: deleteMutate } = useMutation({
+    mutationFn: reviewsApi.deleteReview,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["reviews"] });
+    },
+  });
+
+  const handleDelete = (id: string) => {
+    deleteMutate(id);
+  };
+
   return (
     <table className="text-black-500 min-w-full table-fixed border-spacing-8">
       <thead className="">
@@ -40,9 +54,11 @@ export const ReviewsTable = ({ reviews }: IReviewsTableProps) => {
             </td>
 
             <td>
-              <button className="cursor-pointer pl-3">
-                <SvgMore />
-              </button>
+              <DropdownMenu
+                buttonClassName="p-4"
+                editLink={`/reviews/edit-reviews/${review.id}`}
+                handleDelete={() => handleDelete(review.id)}
+              />
             </td>
           </tr>
         ))}

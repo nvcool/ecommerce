@@ -1,42 +1,42 @@
 import type { ICustomer } from "../types/ICustomer";
+import type { IPaginationResponse } from "../types/IPaginationResponse";
 import { fetchHendler } from "../utils/helpers";
-import type { FormSchemaType } from "./schemas/schemas";
+import type { formSchemaProductType } from "./schemas/schemasProduct";
+import type { formCustomersSchemaType } from "./schemas/shemasCustomer";
 
 export const API_URL = "http://localhost:3000";
 
 export const customersApi = {
-  getAllCustomers: (page: number, limit: number, search: string) => {
-    fetchHendler(
+  getAllCustomers: (page: number, limit: number, search: string) =>
+    fetchHendler<IPaginationResponse<ICustomer>>(
       fetch(
         `${API_URL}/customers?_page=${page}&_per_page=${limit}&title=${search}`,
       ),
-    );
-  },
+    ),
+  getCustomerById: (id: string) =>
+    fetchHendler<ICustomer>(fetch(`${API_URL}/customers/${id}`)),
 
-  createCustomer: (newCustomerData: FormSchemaType) =>
+  createCustomer: (newCustomerData: formSchemaProductType) =>
     fetchHendler(
       fetch(`${API_URL}/customers`, {
         method: "POST",
         body: JSON.stringify({
-          title: newCustomerData.title,
-          price: newCustomerData.price,
-          category: newCustomerData.category,
-          sku: newCustomerData.sku,
-          description: newCustomerData.description,
-          stock: newCustomerData.stock,
-          quantity: newCustomerData.quantity,
-          images: newCustomerData.images,
-          colors: newCustomerData.colors,
-          size: newCustomerData.size,
+          ...newCustomerData,
         }),
       }),
     ),
 
-  putCustomer: (id: string, CustomerData: ICustomer) =>
+  putCustomer: ({
+    id,
+    customerData,
+  }: {
+    id: string;
+    customerData: formCustomersSchemaType;
+  }) =>
     fetchHendler(
       fetch(`${API_URL}/customers/${id}`, {
         method: "PUT",
-        body: JSON.stringify(CustomerData),
+        body: JSON.stringify({ ...customerData }),
       }),
     ),
 

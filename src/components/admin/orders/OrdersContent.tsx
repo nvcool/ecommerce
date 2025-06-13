@@ -19,10 +19,23 @@ export const OrdersContent = () => {
   const pagination = useSelector((state: RootState) => state.ordersPage);
   const dispatch = useDispatch();
 
-  const { data: orders } = useQuery({
+  const {
+    data: orders,
+    isError,
+    isLoading,
+    error,
+  } = useQuery({
     queryKey: ["orders", pagination.page, pagination.limit],
     queryFn: () => getAllOrders(pagination.page, pagination.limit),
   });
+
+  if (isLoading) return <h1 className="text-center text-3xl">Loading...</h1>;
+  if (isError)
+    return (
+      <div className="text-center text-3xl text-red-900">
+        Error: {(error as Error).message}
+      </div>
+    );
 
   return (
     <section className="bg-white-900 flex h-[727px] flex-col rounded-lg">

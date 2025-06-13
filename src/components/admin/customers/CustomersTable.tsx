@@ -1,13 +1,26 @@
+import { useMutation } from "@tanstack/react-query";
 import type { ICustomer } from "../../../types/ICustomer";
-import { SvgMore } from "../../ui/svg/SvgMore";
+import { DropdownMenu } from "../../ui/DropdownMenu";
 import { SvgSort } from "../../ui/svg/SvgSort";
 import { UserAvatar } from "../../UserAvatar";
+import { customersApi } from "../../../lib/queriesCustomers";
+import { queryClient } from "../../../App";
 
 interface ICustomersTableProps {
   customers?: ICustomer[];
 }
 
 export const CustomersTable = ({ customers }: ICustomersTableProps) => {
+  const { mutate: deleteMutate } = useMutation({
+    mutationFn: customersApi.deleteCustomer,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["customers"] });
+    },
+  });
+
+  const handleDelete = (id: string) => {
+    deleteMutate(id);
+  };
   return (
     <table className="text-black-500 min-w-full table-fixed border-spacing-8">
       <thead className="">
@@ -36,9 +49,11 @@ export const CustomersTable = ({ customers }: ICustomersTableProps) => {
             <td className="w-[30%]">{customer.address}</td>
 
             <td>
-              <button className="cursor-pointer pl-3">
-                <SvgMore />
-              </button>
+              <DropdownMenu
+                buttonClassName="p-4"
+                editLink={`/customers/edit-customers/${customer.id}`}
+                handleDelete={() => handleDelete(customer.id)}
+              />
             </td>
           </tr>
         ))}

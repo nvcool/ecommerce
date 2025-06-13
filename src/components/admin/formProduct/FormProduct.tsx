@@ -8,12 +8,15 @@ import { Button } from "../../ui/Button";
 import { InputWithLabel } from "../../ui/input/InputWithLabel";
 import { TextareaWithLabel } from "../../ui/textarea/TextareaWithLabel";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { formSchema, type FormSchemaType } from "../../../lib/schemas/schemas";
+import {
+  formSchemaProduct,
+  type formSchemaProductType,
+} from "../../../lib/schemas/schemasProduct";
 import { useEffect } from "react";
 import type { IProduct } from "../../../types/IProduct";
 
 interface IFormProductProps {
-  onSubmit: SubmitHandler<FormSchemaType>;
+  onSubmit: SubmitHandler<formSchemaProductType>;
   product?: IProduct;
   isSuccess?: boolean;
   isLoading?: boolean;
@@ -25,9 +28,15 @@ export const FormProduct = ({
   isLoading,
   product,
 }: IFormProductProps) => {
-  const { handleSubmit, reset, control } = useForm<FormSchemaType>({
-    resolver: zodResolver(formSchema),
+  const {
+    handleSubmit,
+    reset,
+    control,
+    formState: { errors },
+  } = useForm<formSchemaProductType>({
+    resolver: zodResolver(formSchemaProduct),
   });
+
   const {
     fields: sizes,
     append: appendSizes,
@@ -57,7 +66,7 @@ export const FormProduct = ({
 
   // Этот useEffect срабатывает, когда форма была успешно отправлена
   useEffect(() => {
-    if (isSuccess) {
+    if (isSuccess && !product) {
       // Если отправка была успешной, сбрасываем форму
       reset({
         title: "",
@@ -82,9 +91,9 @@ export const FormProduct = ({
         sku: product.sku,
         description: product.description,
         stock: product.stock,
-        // images: product.image,
-        // colors: product.colors,
-        // size: product.size,
+        images: product.images.map((image) => ({ name: image })),
+        colors: product.colors,
+        sizes: product.sizes,
       });
     } else {
       reset();
@@ -96,7 +105,7 @@ export const FormProduct = ({
       onSubmit={handleSubmit(onSubmit)}
       className="flex h-full flex-col pl-12"
     >
-      <div className="flex flex-grow gap-[74px]">
+      <div className="mb-12 flex flex-grow gap-[74px]">
         <div className="flex flex-col gap-4">
           <Controller
             name="title"
@@ -271,6 +280,11 @@ export const FormProduct = ({
           >
             Add Image
           </Button>
+          {errors.images && (
+            <span className="text-xs text-red-500">
+              {errors.images.message}
+            </span>
+          )}
 
           {colors.map((color, index) => (
             <div key={color.id} className="flex gap-2">
@@ -332,6 +346,11 @@ export const FormProduct = ({
           >
             Add Color
           </Button>
+          {errors.colors && (
+            <span className="text-xs text-red-500">
+              {errors.colors.message}
+            </span>
+          )}
 
           {sizes.map((size, index) => (
             <div key={size.id} className="flex gap-2">
@@ -377,21 +396,31 @@ export const FormProduct = ({
                   );
                 }}
               />
-              <Button type="button" onClick={() => removeSizes(index)}>
+              <Button
+                className="mt-auto block h-fit"
+                type="button"
+                onClick={() => removeSizes(index)}
+              >
                 Remove
               </Button>
             </div>
           ))}
           <Button
+            className="w-fit"
             type="button"
             onClick={() => appendSizes({ name: "", amount: 1 })}
           >
             Add size
           </Button>
+          {errors.sizes && (
+            <span className="text-xs text-red-500">{errors.sizes.message}</span>
+          )}
         </div>
       </div>
 
-      <Button className="mb-10 w-fit">SaveProduct</Button>
+      <Button disabled={isLoading} className="mb-10 w-fit">
+        {isLoading ? "Loading . . ." : "SaveProduct"}
+      </Button>
     </form>
   );
 };

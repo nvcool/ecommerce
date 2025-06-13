@@ -1,16 +1,17 @@
 import { AdminHeader } from "../AdminHeader";
-import { AddNewProductContent } from "./AddNewProductContent";
+import { ProductEditor } from "./ProductEditor";
 
 export const AddNewProduct = () => {
   return (
     <section>
       <AdminHeader
         breadcrumbs={[
-          { link: "/admin/add-product", text: "Admin" },
+          { link: "/admin", text: "Admin" },
+          { link: "/admin/products", text: "Products" },
           { text: "Add products" },
         ]}
       />
-      <AddNewProductContent />
+      <ProductEditor />
     </section>
   );
 };

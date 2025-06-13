@@ -74,3 +74,6 @@
     @apply bg-white-100 text-black-800 font-manrope text-sm leading-[175%];
   }
 }
+
+@layer components {
+}

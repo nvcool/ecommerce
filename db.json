@@ -1,98 +1,233 @@
 {
   "orders": [
     {
-      "id": "1f-ch",
-      "date": "20 Mar, 2023",
-      "total": 110,
-      "status": "completed",
-      "products": [
-        {
-          "id": "5f-ch",
-          "image": "tShirt",
-          "title": "Raw Black T-Shirt Lineup",
-          "sku": 47514501,
-          "price": 75,
-          "stock": "In Stock",
-          "category": "T-shirt, Men",
-          "date": "20 Mar, 2023",
-          "quantity": 2
-        },
-        {
-          "id": "1zxf-4ch",
-          "image": "tShirt",
-          "title": "Classic Monochrome Tees",
-          "sku": 47514501,
-          "price": 35,
-          "stock": "In Stock",
-          "category": "T-shirt, Men",
-          "date": "19 Mar, 2023",
-          "quantity": 3
-        }
-      ]
-    },
-    {
-      "id": "1f-4ch",
-      "date": "20 Mar, 2023",
-      "total": 75,
+      "date": "10 Jun, 2067",
+      "total": 117,
       "status": "processing",
       "products": [
         {
-          "id": "5f-ch",
-          "image": "tShirt",
-          "title": "Raw Black T-Shirt Lineup",
+          "id": "5zxf-cferih",
+          "images": ["tShirt"],
+          "title": "Sleek and Cozy Black",
           "sku": 47514501,
-          "price": 75,
+          "price": 30,
           "stock": "In Stock",
-          "category": "T-shirt, Men",
-          "date": "20 Mar, 2023",
-          "quantity": 1
+          "category": "T-shirt",
+          "date": "19 Mar, 2023",
+          "description": "Very perfect clothings",
+          "color": {
+            "name": "",
+            "hex": ""
+          },
+          "size": {
+            "name": "m",
+            "amount": 2
+          },
+          "quantity": 2
         },
         {
-          "id": "1zxf-4ch",
-          "image": "tShirt",
-          "title": "Classic Monochrome Tees",
+          "id": "5free-ssclh",
+          "images": ["tShirt"],
+          "title": "Elegant Ebony Sweatshirts",
           "sku": 47514501,
-          "price": 35,
+          "price": 57,
           "stock": "In Stock",
-          "category": "T-shirt, Men",
+          "category": "Hoodie",
           "date": "19 Mar, 2023",
+          "description": "Very perfect clothings",
+          "color": {
+            "name": "",
+            "hex": ""
+          },
+          "size": {
+            "name": "xs",
+            "amount": 1
+          },
           "quantity": 1
         }
-      ]
+      ],
+      "id": "1f-ch"
     },
     {
-      "id": "1yyf-4erych",
       "date": "20 Mar, 2023",
       "total": 75,
-      "status": "cancelled",
-      "products": [
-        {
-          "id": "5f-ch",
-          "image": "tShirt",
-          "title": "Raw Black T-Shirt Lineup",
-          "sku": 47514501,
-          "price": 75,
-          "stock": "In Stock",
-          "category": "T-shirt, Men",
-          "date": "20 Mar, 2023"
-        },
-        {
-          "id": "1zxf-4ch",
-          "image": "tShirt",
-          "title": "Classic Monochrome Tees",
-          "sku": 47514501,
-          "price": 35,
-          "stock": "In Stock",
-          "category": "T-shirt, Men",
-          "date": "19 Mar, 2023"
-        }
-      ]
+      "status": "processing",
+      "id": "1f-4ch"
+    },
+    {
+      "date": "20 Mar, 2023",
+      "total": 75,
+      "status": "completed",
+      "id": "1yyf-4erych"
     }
   ],
   "products": [
     {
-      "id": "1zxf-4ch",
+      "id": "1zxf-4chz",
+      "title": "Classic Monochrome Teesуe",
+      "price": 35,
+      "category": "T-shirt, Men",
+      "sku": 47514501,
+      "description": "Very perfect clothings",
+      "stock": "In Stock",
+      "images": ["http://localhost:5173/admin/products/edit-product/1zxf-4ch"],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ]
+    },
+    {
+      "id": "5sdxxf-chfc",
+      "title": "Monochromatic Wardrobe",
+      "sku": 47514501,
+      "price": 27,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt",
+      "date": "7 Feb, 2023",
+      "description": "Very perfect clothings",
       "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
+    },
+    {
+      "id": "12xdf-chh",
+      "title": "Essential Neutrals",
+      "sku": 47514501,
+      "price": 22,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "T-shirt, Raw",
+      "date": "7 Feb, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
+    },
+    {
+      "id": "5ccf-chrrhr",
+      "title": "UTRAANET Black",
+      "sku": 47514501,
+      "price": 43,
+      "stock": "In Stock",
+      "category": "T-shirt, Trend",
+      "date": "7 Feb, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
+    },
+    {
+      "id": "5free-sschw",
+      "title": "Elegant Ebony Sweatshirts",
+      "sku": 47514501,
+      "price": 57,
+      "stock": "In Stock",
+      "status": "Completed",
+      "category": "Hoodie",
+      "date": "19 Mar, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
+    },
+    {
+      "id": "5f-chb",
+      "title": "Raw Black T-Shirt Lineup",
+      "sku": 47514501,
+      "price": 75,
+      "stock": "In Stock",
+      "category": "T-shirt, Men",
+      "date": "20 Mar, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
+    },
+    {
+      "id": "1zxf-4chu",
       "title": "Classic Monochrome Tees",
       "sku": 47514501,
       "price": 35,
@@ -100,149 +235,193 @@
       "category": "T-shirt, Men",
       "date": "19 Mar, 2023",
       "description": "Very perfect clothings",
+      "images": ["tShirt"],
       "sizes": [
-        { "name": "M", "amount": 5 },
-        { "name": "S", "amount": 2 }
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
       ],
-      "colors": [{ "name": "Blue", "hex": "#334433" }]
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
     },
-
     {
-      "id": "5sdxxf-ch",
-      "image": "tShirt",
+      "id": "5sdxxf-cho",
       "title": "Monochromatic Wardrobe",
       "sku": 47514501,
       "price": 27,
       "stock": "In Stock",
       "status": "Completed",
       "category": "T-shirt",
-      "date": "7 Feb, 2023"
+      "date": "7 Feb, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
     },
     {
-      "id": "12xdf-ch",
-      "image": "tShirt",
+      "id": "12xdtf-ch",
       "title": "Essential Neutrals",
       "sku": 47514501,
       "price": 22,
       "stock": "In Stock",
       "status": "Completed",
       "category": "T-shirt, Raw",
-      "date": "7 Feb, 2023"
+      "date": "7 Feb, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
     },
     {
-      "id": "5ccf-chrrh",
-      "image": "tShirt",
+      "id": "5ccf-chrkrh",
       "title": "UTRAANET Black",
       "sku": 47514501,
       "price": 43,
       "stock": "In Stock",
       "category": "T-shirt, Trend",
-      "date": "7 Feb, 2023"
+      "date": "7 Feb, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
     },
     {
-      "id": "5free-ssch",
-      "image": "tShirt",
+      "id": "5free-ssclh",
       "title": "Elegant Ebony Sweatshirts",
       "sku": 47514501,
       "price": 57,
       "stock": "In Stock",
       "status": "Completed",
       "category": "Hoodie",
-      "date": "19 Mar, 2023"
+      "date": "19 Mar, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
     },
     {
-      "id": "5zxf-cferh",
-      "image": "tShirt",
+      "id": "5zxf-cferih",
       "title": "Sleek and Cozy Black",
       "sku": 47514501,
       "price": 30,
       "stock": "In Stock",
       "status": "Completed",
       "category": "T-shirt",
-      "date": "19 Mar, 2023"
+      "date": "19 Mar, 2023",
+      "description": "Very perfect clothings",
+      "images": ["tShirt"],
+      "sizes": [
+        {
+          "name": "M",
+          "amount": 5
+        },
+        {
+          "name": "S",
+          "amount": 2
+        }
+      ],
+      "colors": [
+        {
+          "name": "Blue",
+          "hex": "#334433"
+        }
+      ]
     },
     {
-      "id": "5f-ch",
-      "image": "tShirt",
-      "title": "Raw Black T-Shirt Lineup",
-      "sku": 47514501,
-      "price": 75,
-      "stock": "In Stock",
+      "title": "Roblox666",
+      "price": 34634,
       "category": "T-shirt, Men",
-      "date": "20 Mar, 2023"
-    },
-    {
-      "id": "1zxf-4ch",
-      "image": "tShirt",
-      "title": "Classic Monochrome Tees",
-      "sku": 47514501,
-      "price": 35,
+      "sku": 463635,
+      "description": "dxh rdfhxdft rhrgx",
       "stock": "In Stock",
-      "category": "T-shirt, Men",
-      "date": "19 Mar, 2023"
-    },
-    {
-      "id": "5sdxxf-ch",
-      "image": "tShirt",
-      "title": "Monochromatic Wardrobe",
-      "sku": 47514501,
-      "price": 27,
-      "stock": "In Stock",
-      "status": "Completed",
-      "category": "T-shirt",
-      "date": "7 Feb, 2023"
-    },
-    {
-      "id": "12xdf-ch",
-      "image": "tShirt",
-      "title": "Essential Neutrals",
-      "sku": 47514501,
-      "price": 22,
-      "stock": "In Stock",
-      "status": "Completed",
-      "category": "T-shirt, Raw",
-      "date": "7 Feb, 2023"
-    },
-    {
-      "id": "5ccf-chrrh",
-      "image": "tShirt",
-      "title": "UTRAANET Black",
-      "sku": 47514501,
-      "price": 43,
-      "stock": "In Stock",
-      "category": "T-shirt, Trend",
-      "date": "7 Feb, 2023"
-    },
-    {
-      "id": "5free-ssch",
-      "image": "tShirt",
-      "title": "Elegant Ebony Sweatshirts",
-      "sku": 47514501,
-      "price": 57,
-      "stock": "In Stock",
-      "status": "Completed",
-      "category": "Hoodie",
-      "date": "19 Mar, 2023"
-    },
-    {
-      "id": "5zxf-cferh",
-      "image": "tShirt",
-      "title": "Sleek and Cozy Black",
-      "sku": 47514501,
-      "price": 30,
-      "stock": "In Stock",
-      "status": "Completed",
-      "category": "T-shirt",
-      "date": "19 Mar, 2023"
+      "images": ["http://localhost:5173/admin/add-product"],
+      "colors": [
+        {
+          "name": "Red",
+          "hex": "$tgdgre"
+        }
+      ],
+      "sizes": [
+        {
+          "name": "fs",
+          "amount": 1
+        }
+      ],
+      "id": "acb6c"
     }
   ],
   "customers": [
     {
-      "id": "12-cfh",
-      "name": "Esthern Howard",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVBbO_6tGTz9VaeeWb4ah_9PmHnqvVyc_ESA&s",
+      "name": "Spizov Top",
       "email": "esther.howard@gmail.com",
       "address": "8642 Yule Street, Arvada CO 80007",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVBbO_6tGTz9VaeeWb4ah_9PmHnqvVyc_ESA&s"
+      "id": "12-cfh"
     },
     {
       "id": "1w2-cfh",
@@ -251,62 +430,62 @@
       "address": "5331 Rexford Court, Montgomery AL 36116"
     },
     {
-      "id": "12xx-cfh",
+      "id": "12xx-cfvh",
       "name": "Brooklyn Simmons",
       "email": "brooklyn.simmons@gmail.com",
       "address": "2325 Eastridge Circle, Moore OK 73160"
     },
     {
-      "id": "1w2-cfhbvc",
+      "image": "https://static.vecteezy.com/system/resources/previews/026/174/963/non_2x/mail-carrier-avatar-filled-outline-icon-vector.jpg",
       "name": "Robert Fox",
       "email": "robert.fox@gmail.com",
       "address": "2436 Naples Avenue, Panama City FL 32405",
-      "image": "https://static.vecteezy.com/system/resources/previews/026/174/963/non_2x/mail-carrier-avatar-filled-outline-icon-vector.jpg"
+      "id": "1w2-cfhzbvc"
     },
     {
-      "id": "12-cfxh",
+      "id": "12-cfxbh",
       "name": "Esthern Howard",
       "email": "esther.howard@gmail.com",
       "address": "8642 Yule Street, Arvada CO 80007"
     },
     {
-      "id": "1w2-cfhxxxz",
+      "id": "1w2-cfhxexxz",
       "name": "Wade Warren",
       "email": "wade.warren@gmail.com",
       "address": "5331 Rexford Court, Montgomery AL 36116"
     },
     {
-      "id": "12xx-cfh",
+      "id": "12xqx-cfh",
       "name": "Brooklyn Simmons",
       "email": "brooklyn.simmons@gmail.com",
       "address": "2325 Eastridge Circle, Moore OK 73160"
     },
     {
-      "id": "1w2-cfhbvc",
+      "id": "1w2-cfthbvc",
       "name": "Robert Fox",
       "email": "robert.fox@gmail.com",
       "address": "2436 Naples Avenue, Panama City FL 32405"
     },
     {
-      "id": "12ww-cfh",
+      "id": "12w3w-cfh",
       "name": "Esthern Howard",
       "email": "esther.howard@gmail.com",
       "address": "8642 Yule Street, Arvada CO 80007"
     },
     {
-      "id": "1wd2-cfh",
+      "id": "1wd52-cfh",
       "name": "Wade Warren",
       "email": "wade.warren@gmail.com",
       "address": "5331 Rexford Court, Montgomery AL 36116"
     },
     {
-      "id": "12txx-cfh",
+      "id": "12tbxx-cfh",
       "name": "Brooklyn Simmons",
       "email": "brooklyn.simmons@gmail.com",
       "address": "2325 Eastridge Circle, Moore OK 73160"
     },
     {
-      "id": "1yw2-cfhbvc",
+      "id": "1yxw2-cfhbvc",
       "name": "Robert Fox",
       "email": "robert.fox@gmail.com",
       "address": "2436 Naples Avenue, Panama City FL 32405"
@@ -315,32 +494,46 @@
   "reviews": [
     {
       "id": "2323gd-43",
-      "raiting": 2.5,
+      "raiting": 2,
       "text": "Roverti defe",
       "user": {
-        "id": "1yw2-cfhbvc",
+        "id": "1w2-cfhzbvc",
         "name": "Robert Fox",
         "email": "robert.fox@gmail.com",
         "address": "2436 Naples Avenue, Panama City FL 32405"
       }
     },
     {
-      "id": "423d-4zz3",
-      "raiting": 4.5,
-      "text": "Roverti xzczxdefe",
+      "id": "54hjj-43",
+      "raiting": 3,
+      "text": "Roverti defe",
       "user": {
-        "id": "1yw2-cfhbvc",
-        "name": "Robert Fox",
-        "email": "robert.fox@gmail.com",
-        "address": "2436 Naples Avenue, Panama City FL 32405"
+        "id": "12-cfh",
+        "name": "Esthern Howard",
+        "email": "esther.howard@gmail.com",
+        "address": "8642 Yule Street, Arvada CO 80007",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVBbO_6tGTz9VaeeWb4ah_9PmHnqvVyc_ESA&s"
       }
+    },
+    {
+      "userId": "12xqx-cfh",
+      "text": "Roverti xzczxdefe gggge",
+      "raiting": 3,
+      "user": {
+        "id": "12xqx-cfh",
+        "name": "Brooklyn Simmons",
+        "email": "brooklyn.simmons@gmail.com",
+        "address": "2325 Eastridge Circle, Moore OK 73160",
+        "image": ""
+      },
+      "id": "423d-4zz3"
     },
     {
       "id": "423-gd-43",
       "raiting": 5,
       "text": "Roverti defsssre",
       "user": {
-        "id": "1yw2-cfhbvc",
+        "id": "1w2-cfhzbvc",
         "name": "Robert Fox",
         "email": "robert.fox@gmail.com",
         "address": "2436 Naples Avenue, Panama City FL 32405"

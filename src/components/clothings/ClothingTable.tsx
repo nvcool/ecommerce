@@ -12,7 +12,7 @@ interface IClothingTableProps {
 }
 
 export const ClothingTable = ({ products }: IClothingTableProps) => {
-  const { mutate: deleteProduct } = useMutation({
+  const { mutate: deleteMutate } = useMutation({
     mutationFn: productsApi.deleteProduct,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["products"] });
@@ -20,7 +20,7 @@ export const ClothingTable = ({ products }: IClothingTableProps) => {
   });
 
   const handleDelete = (id: string) => {
-    deleteProduct(id);
+    deleteMutate(id);
   };
 
   return (
@@ -63,6 +63,7 @@ export const ClothingTable = ({ products }: IClothingTableProps) => {
             <td>
               <DropdownMenu
                 buttonClassName="p-4"
+                editLink={`/products/edit-product/${product.id}`}
                 handleDelete={() => handleDelete(product.id)}
               />
             </td>

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const formSchema = z.object({
+export const formSchemaProduct = z.object({
   title: z
     .string({ message: "Enter title !" })
     .min(4, { message: "Title minimum 4 characters!" }),
@@ -25,6 +25,7 @@ export const formSchema = z.object({
         .string({ required_error: "Enter image URL!" })
         .url({ message: "Enter correct URL!" }),
     }),
+    { required_error: "Enter image URL!" },
   ),
   colors: z.array(
     z.object({
@@ -35,6 +36,7 @@ export const formSchema = z.object({
         .string({ required_error: "Enter hex!" })
         .min(1, { message: "Minimum 7 symbols !" }),
     }),
+    { required_error: "Enter any color!" },
   ),
   sizes: z.array(
     z.object({
@@ -43,7 +45,8 @@ export const formSchema = z.object({
         .min(1, { message: "More than 1 characthers !" }),
       amount: z.coerce.number().min(1, { message: "More than 1 item !" }),
     }),
+    { required_error: "Enter any size !" },
   ),
 });
 
-export type FormSchemaType = z.infer<typeof formSchema>;
+export type formSchemaProductType = z.infer<typeof formSchemaProduct>;

@@ -12,6 +12,7 @@ export const DonutChart = () => {
   return (
     <PieChart width={96} height={96}>
       <Pie
+        className="outline-none"
         data={data}
         cx="50%"
         cy="50%"

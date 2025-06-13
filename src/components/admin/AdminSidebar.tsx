@@ -14,37 +14,31 @@ const navigate = [
     image: <SvgDashboard />,
     label: "Dashboard",
     link: "/admin/dashboard",
-    activePaths: ["/admin/dashboard"],
   },
   {
     image: <SvgProduct />,
     label: "Products",
     link: "/admin/products",
-    activePaths: ["/admin/products", "/admin/add-product"],
   },
   {
     image: <SvgCart />,
     label: "Orders",
     link: "/admin/orders",
-    activePaths: ["/admin/orders"],
   },
   {
     image: <SvgUsers />,
     label: "Customers",
     link: "/admin/customers",
-    activePaths: ["/admin/customers"],
   },
   {
     image: <SvgEmptyStar />,
     label: "Reviews",
     link: "/admin/reviews",
-    activePaths: ["/admin/reviews"],
   },
   {
     image: <SvgSettings />,
     label: "Settings",
     link: "/admin/settings",
-    activePaths: ["/admin/settings"],
   },
 ];
 
@@ -73,7 +67,6 @@ export const AdminSidebar = () => {
               to={item.link}
               image={item.image}
               text={item.label}
-              activePaths={item.activePaths}
             />
           ))}
         </li>

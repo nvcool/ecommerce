@@ -1,8 +1,8 @@
-export const fetchHendler = async (query: Promise<Response>) => {
+export const fetchHendler = async <T>(query: Promise<Response>) => {
   const res = await query;
   if (!res.ok) {
-    throw { status: res.status, message: res.statusText };
+    throw new Error(`Error ${res.status}: ${res.statusText}`);
   } else {
-    return res.json();
+    return res.json() as T;
   }
 };

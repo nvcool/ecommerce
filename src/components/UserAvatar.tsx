@@ -7,7 +7,7 @@ interface UserAvatarProps {
 }
 
 export const UserAvatar = ({ name, imageUrl }: UserAvatarProps) => {
-  const initials = name
+  const initials = (name ?? "")
     .split(" ")
     .map((n) => n[0])
     .join("");

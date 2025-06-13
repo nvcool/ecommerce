@@ -1,13 +1,30 @@
+import { useMutation } from "@tanstack/react-query";
 import tShirt from "../../../assets/products/t-shirt-1.png";
 import type { IOrder } from "../../../types/IOrder";
-import { SvgMore } from "../../ui/svg/SvgMore";
+import { DropdownMenu } from "../../ui/DropdownMenu";
 import { SvgSort } from "../../ui/svg/SvgSort";
+import { ordersApi } from "../../../lib/queriesOrders";
+import { queryClient } from "../../../App";
 
 interface IOrdersTableProps {
   orders?: IOrder[];
 }
 
 export const OrdersTable = ({ orders }: IOrdersTableProps) => {
+  const { mutate: deleteOrders } = useMutation({
+    mutationFn: ordersApi.deleteOrder,
+    onSuccess: () => {
+      //exact: false Нужно ли, есть ли вариант по лучше
+      //p.s. Искал решение, после удаления не отрисовывался результат, только после принудительно перезагузки страницы
+      //p.s.2. Как понял такой подход запрашивает по ключу вообще все ['orders'], что в свою очаредь вызывает нагрузку мощную если товаров много, нужен обход
+      queryClient.invalidateQueries({ queryKey: ["orders"] });
+    },
+  });
+
+  const handleDelete = (id: string) => {
+    deleteOrders(id);
+  };
+
   return (
     <table className="text-black-500 min-w-full border-spacing-8">
       <thead className="">
@@ -41,9 +58,11 @@ export const OrdersTable = ({ orders }: IOrdersTableProps) => {
             <td className="w-[15%]">{order.total}</td>
             <td>{order.status}</td>
             <td>
-              <button className="cursor-pointer pl-3">
-                <SvgMore />
-              </button>
+              <DropdownMenu
+                buttonClassName="p-4"
+                editLink={`/orders/edit-orders/${order.id}`}
+                handleDelete={() => handleDelete(order.id)}
+              />
             </td>
           </tr>
         ))}

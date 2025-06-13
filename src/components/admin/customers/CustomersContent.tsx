@@ -35,8 +35,13 @@ export const CustomersContent = () => {
     queryFn: () => getAllCustomers(pagination.page, pagination.limit),
   });
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error: {(error as Error).message}</div>;
+  if (isLoading) return <h1 className="text-center text-3xl">Loading...</h1>;
+  if (isError)
+    return (
+      <div className="text-center text-3xl text-red-900">
+        Error: {(error as Error).message}
+      </div>
+    );
 
   return (
     <section className="bg-white-900 flex h-[727px] flex-col rounded-lg">
